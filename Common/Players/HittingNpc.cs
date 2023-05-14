@@ -8,11 +8,8 @@ namespace Anthem.Common.Players
 {
 	public class HittingNpc : ModPlayer
 	{
-        public override void SetStaticDefaults() 
-		{
 
-			
-			public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
 			{
 			base.OnHitNPC(player, target, damage, knockBack, crit);
             // Inflict the OnFire debuff for 1 second onto any NPC/Monster that this hits.
@@ -20,9 +17,6 @@ namespace Anthem.Common.Players
             target.AddBuff(BuffID.OnFire, 60);
 				
 			}
-
-
-		}
 
 	}
 }
