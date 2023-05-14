@@ -27,6 +27,7 @@ namespace Anthem.Items.Accessory
         {
             player.moveSpeed *= 1.5f; // %150 Increase in Speed
             player.GetDamage(DamageClass.Generic) *= 5f; // %500 Increase in Damage
+            player.GetArmorPenetration(DamageClass.Generic) *= 2f;
         }
 
 		public override void AddRecipes()
