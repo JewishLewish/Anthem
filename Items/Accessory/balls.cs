@@ -13,8 +13,8 @@ namespace Anthem.Items.Accessory
         {
             
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("ball"); // The displayed name of the item
-            Tooltip.SetDefault("Ur balls are strong!"); // The tooltip displayed when hovering over the item
+            DisplayName.SetDefault("DiamondsAreForever"); // The displayed name of the item
+            Tooltip.SetDefault("Halves damage output /n Diamonds are forever Throw your diamonds in the sky if you feel the vibe Diamonds are forever The Roc is still alive every time I rhyme Forever ever? Forever ever? Ever, ever? Ever, ever? Ever, ever? Ever, ever? Ever, ever? Ever, ever?"); // The tooltip displayed when hovering over the item
         }
 
 
@@ -27,23 +27,26 @@ namespace Anthem.Items.Accessory
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(ItemID.Gel, 1) // AddIngredient takes ItemID, then Quantity
-				.AddTile(TileID.WorkBenches) // AddTile takes the TileID
+				.AddIngredient(ItemID.Diamond, 5) // AddIngredient takes ItemID, then Quantity
+				.AddTile(TileID.Anvils) // AddTile takes the TileID
 				.Register(); // Register registers the item
 		}
 
-        		public override void SetDefaults() {
-			Item.width = 20;
-			Item.height = 20;
-			Item.value = Item.buyPrice(0, 10, 0, 0);
-			Item.rare = ItemRarityID.Cyan;
-			Item.expert = true;
-			Item.accessory = true;
-			Item.damage = 120;
-			Item.knockBack = 2f;
-			Item.defense = 6;
+        public override void SetDefaults() 
+		{
+		Item.width = 20;
+		Item.height = 20;
+		Item.value = Item.buyPrice(0, 10, 0, 0);
+		Item.rare = ItemRarityID.Cyan;
+		Item.accessory = true;
+		Item.defense = 20; // give 20% damage reduction
 		}
 
+		public override void UpdateAccessory(Player player, bool hideVisual)
+        {
+		player.GetDamage(DamageClass.Generic) *= 0.5f; //divide dmg by 50%
+
+		}
 
 		public override Color? GetAlpha(Color lightColor) {
 			return Color.White;
