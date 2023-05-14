@@ -12,7 +12,7 @@ namespace Anthem.Items.Accessory
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             DisplayName.SetDefault("Blue Slime Necklace"); // The displayed name of the item
-            //Tooltip.SetDefault("150% Faster Movespeed\n500% Damage Increase"); // The tooltip displayed when hovering over the item
+            Tooltip.SetDefault("20% Jump Boost"); // The tooltip displayed when hovering over the item
         }
 
         public override void SetDefaults()
