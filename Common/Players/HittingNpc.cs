@@ -4,12 +4,14 @@ using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Microsoft.Xna.Framework;
 
-namespace Anthem.Players
+namespace Anthem.Common.Players
 {
 	public class HittingNpc : ModPlayer
 	{
         public override void SetStaticDefaults() 
 		{
+
+			
 			public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
 			{
 			base.OnHitNPC(player, target, damage, knockBack, crit);
