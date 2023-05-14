@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 
-namespace Anthem.Items
+namespace Anthem.Items.Accessory
 {
     //[AutoloadEquip(EquipType.Shoes)]
     internal class FirstSword : ModItem
