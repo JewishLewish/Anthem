@@ -6,7 +6,7 @@ using Terraria.GameContent.Creative;
 namespace Anthem.Items.Accessory
 {
     //[AutoloadEquip(EquipType.Shoes)]
-    internal class FirstSword : ModItem
+    internal class Yeezus : ModItem
     {
         public override void SetStaticDefaults()
         {
