@@ -6,16 +6,13 @@ using Terraria.GameContent.Creative;
 
 namespace Anthem.Items.Accessory
 {
-    
     internal class AnthemCharm : ModItem
     {
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Anthem Charm");
             Tooltip.SetDefault("Provides bonuses to all players:\n+2 defense\n+2 life regeneration\n+2 mana regeneration\n5% increased maximum HP\n+2 armor penetration");
-        }
-
-        
+        }        
 
         public override void SetDefaults()
         {
@@ -36,7 +33,7 @@ namespace Anthem.Items.Accessory
                 worldPlayer.lifeRegen += 2; // Increase life regeneration by 2
                 worldPlayer.manaRegen += 2; // Increase mana regeneration by 2
                 worldPlayer.statLifeMax2 += (int)(worldPlayer.statLifeMax2 * 0.05f); // Increase maximum HP by 5%
-                worldPlayer.GetArmorPenetration(DamageClass.Generic) += 2;
+                worldPlayer.GetArmorPenetration(DamageClass.Generic) += 2; //+2 Armor Penetration
             }
         }
 
