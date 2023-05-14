@@ -12,7 +12,7 @@ namespace Anthem.Items.Accessory
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Anthem Charm");
-            Tooltip.SetDefault("Provides bonuses to all players on your team:\n+2 defense\n+2 life regeneration\n+2 mana regeneration\n5% increased maximum HP");
+            Tooltip.SetDefault("Provides bonuses to all players:\n+2 defense\n+2 life regeneration\n+2 mana regeneration\n5% increased maximum HP");
         }
 
         
@@ -29,6 +29,7 @@ namespace Anthem.Items.Accessory
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+            player.AddBuff(ModContent.BuffType<Buff.Steelster>(), -1);
             foreach (Player worldPlayer in Main.player)
             {
                 worldPlayer.statDefense += 2; // Increase defense by 2
