@@ -3,17 +3,19 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 
+
 namespace Anthem.Items.Accessory
 {
     
-    internal class Blue_Slime_Necklace : ModItem
+    internal class AnthemCharm : ModItem
     {
         public override void SetStaticDefaults()
         {
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Blue Slime Necklace"); // The displayed name of the item
-            Tooltip.SetDefault("+20% Jump Boost"); // The tooltip displayed when hovering over the item
+            DisplayName.SetDefault("Anthem Charm");
+            Tooltip.SetDefault("Provides bonuses to all players on your team:\n+2 defense\n+2 life regeneration\n+2 mana regeneration\n5% increased maximum HP");
         }
+
+        
 
         public override void SetDefaults()
         {
@@ -21,12 +23,19 @@ namespace Anthem.Items.Accessory
             Item.height = 20;
             Item.accessory = true;
             Item.defense = 2;
+            Item.value = Item.sellPrice(silver: 50);
+            Item.rare = ItemRarityID.Green;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.jumpBoost = true; // Enables the jump boost
-            player.jumpSpeedBoost += 0.2f;
+            foreach (Player worldPlayer in Main.player)
+            {
+                worldPlayer.statDefense += 2; // Increase defense by 2
+                worldPlayer.lifeRegen += 2; // Increase life regeneration by 2
+                worldPlayer.manaRegen += 2; // Increase mana regeneration by 2
+                worldPlayer.statLifeMax2 += (int)(worldPlayer.statLifeMax2 * 0.05f); // Increase maximum HP by 5%
+            }
         }
 
 		public override void AddRecipes()
