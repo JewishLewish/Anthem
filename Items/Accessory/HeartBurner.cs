@@ -6,13 +6,13 @@ using Terraria.GameContent.Creative;
 namespace Anthem.Items.Accessory
 {
     //[AutoloadEquip(EquipType.Shoes)]
-    internal class PaperItem : ModItem
+    internal class HeartBurner : ModItem
     {
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Paper Item"); // The displayed name of the item
-            Tooltip.SetDefault("Summons Pet Paper Airplane"); // The tooltip displayed when hovering over the item
+            DisplayName.SetDefault("HeartBurner"); // The displayed name of the item
+            Tooltip.SetDefault("Takes 50% of your Max HP\nReturns 25% of your current HP in Defense"); // The tooltip displayed when hovering over the item
         }
 
         public override void SetDefaults()
@@ -20,13 +20,12 @@ namespace Anthem.Items.Accessory
             Item.width = 20;
             Item.height = 20;
             Item.accessory = true;
-            Item.defense = 5;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.AddBuff(ModContent.BuffType<Buff.Paper_Buff>(), 2);
-            player.moveSpeed *=.05f;
+            player.statDefense += player.statDefense + (player.statLife/4);
+            player.statLifeMax2 = player.statLifeMax2 /= 2;
         }
 
 		public override void AddRecipes()
