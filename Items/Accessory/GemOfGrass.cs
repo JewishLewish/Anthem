@@ -11,7 +11,7 @@ namespace Anthem.Items.Accessory
         {
             DisplayName.SetDefault("Gem of Grass");
             Tooltip.SetDefault("POWER OF GRASS HAS BEEN TOUCHED!\n" +
-            "Gives all Environmental Buffs Including:\n-> Dryad's Blessing\n-> Happy!\n-> Heart Latern\n-> Honey\n-> Star in a Bottle\n-> The Bast Defense");
+            "Gives all Environmental Buffs Including:\n-> Campfire\n-> Dryad's Blessing\n-> Happy!\n-> Heart Latern\n-> Honey\n-> Star in a Bottle\n-> The Bast Defense");
         }
 
         public override void SetDefaults()
@@ -36,16 +36,18 @@ namespace Anthem.Items.Accessory
             player.AddBuff(BuffID.StarInBottle, 0);
 
             player.AddBuff(BuffID.CatBast, 0);
+
+            player.AddBuff(BuffID.Sunflower, 0);
         }
 
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.LesserHealingPotion, 5)
-                .AddIngredient(ItemID.ShinePotion, 5)
-                .AddIngredient(ItemID.RegenerationPotion, 5)
-                .AddIngredient(ItemID.LifeforcePotion, 5)
-                .AddIngredient(ItemID.HeartreachPotion, 5)
+                .AddIngredient(ItemID.Campfire, 1)
+                .AddIngredient(ItemID.CatBast, 1)
+                .AddIngredient(ItemID.StarinaBottle, 1)
+                .AddIngredient(ItemID.BottledHoney, 8)
+                .AddIngredient(ItemID.Sunflower, 16)
                 .AddTile(TileID.TinkerersWorkbench)
                 .Register();
         }
