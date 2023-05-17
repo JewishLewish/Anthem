@@ -37,12 +37,12 @@ namespace Anthem.Items.Accessory
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.LuckPotionGreater, 1)
+                .AddIngredient(ItemID.WhitePearl, 1)
                 .AddIngredient(ItemID.SpelunkerPotion, 5)
-                .AddIngredient(ItemID.LesserManaPotion, 8)
-                .AddIngredient(ItemID.CrimsonCampfire, 4)
-                .AddIngredient(ItemID.Diamond, 8)
-                .AddTile(TileID.TinkerersWorkbench)
+                .AddIngredient(ItemID.GoldBar, 5)
+                .AddIngredient(ItemID.Bone, 30)
+                .AddIngredient(ItemID.Diamond, 5)
+                .AddTile(TileID.SkyMill)
                 .Register();
         }
     }

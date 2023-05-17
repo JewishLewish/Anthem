@@ -31,12 +31,12 @@ namespace Anthem.Items.Accessory
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.InfernoPotion, 1)
-                .AddIngredient(ItemID.RagePotion, 5)
-                .AddIngredient(ItemID.HunterPotion, 5)
+                .AddIngredient(ItemID.FrostburnArrow, 20)
+                .AddIngredient(ItemID.LavaBucket, 3)
+                .AddIngredient(ItemID.Torch, 50)
                 .AddIngredient(ItemID.TitanPotion, 5)
-                .AddIngredient(ItemID.BattlePotion, 5)
-                .AddTile(TileID.TinkerersWorkbench)
+                .AddIngredient(ItemID.HellstoneBar, 10)
+                .AddTile(TileID.Hellforge)
                 .Register();
         }
     }

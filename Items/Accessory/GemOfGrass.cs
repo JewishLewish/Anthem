@@ -45,13 +45,13 @@ namespace Anthem.Items.Accessory
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.Campfire, 1)
-                .AddIngredient(ItemID.CatBast, 1)
-                .AddIngredient(ItemID.StarinaBottle, 1)
-                .AddIngredient(ItemID.BottledHoney, 8)
-                .AddIngredient(ItemID.Sunflower, 16)
-                .AddIngredient(ItemID.HeartLantern,1)
-                .AddTile(TileID.TinkerersWorkbench)
+                .AddIngredient(ItemID.Campfire, 1) //Campfire
+                .AddIngredient(ItemID.CatBast, 1) //CatBast
+                .AddIngredient(ItemID.StarinaBottle, 1) //StarinaBottle
+                .AddIngredient(ItemID.BottledHoney, 2) // BottledHoney
+                .AddIngredient(ItemID.Sunflower, 4) //4 Sunflowers
+                .AddIngredient(ItemID.HeartLantern,1) //Heart Lantern
+                .AddTile(TileID.Campfire)
                 .Register();
         }
     }
