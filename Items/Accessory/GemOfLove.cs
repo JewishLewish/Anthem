@@ -47,9 +47,8 @@ namespace Anthem.Items.Accessory
                 .AddIngredient(ItemID.LesserHealingPotion, 5)
                 .AddIngredient(ItemID.ShinePotion, 5)
                 .AddIngredient(ItemID.RegenerationPotion, 5)
-                .AddIngredient(ItemID.LifeforcePotion, 5)
-                .AddIngredient(ItemID.HeartreachPotion, 5)
-                .AddTile(TileID.TinkerersWorkbench)
+                .AddIngredient(ItemID.LifeCrystal, 5)
+                .AddTile(TileID.DemonAltar)
                 .Register();
         }
     }

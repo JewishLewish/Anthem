@@ -34,7 +34,8 @@ namespace Anthem.Items.Accessory
                 .AddIngredient(ItemID.FrostburnArrow, 20)
                 .AddIngredient(ItemID.LavaBucket, 3)
                 .AddIngredient(ItemID.Torch, 50)
-                .AddIngredient(ItemID.TitanPotion, 5)
+                .AddIngredient(ItemID.FlamingArrow, 20)
+                .AddIngredient(ItemID.HellfireArrow, 20)
                 .AddIngredient(ItemID.HellstoneBar, 10)
                 .AddTile(TileID.Hellforge)
                 .Register();
