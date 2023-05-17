@@ -51,7 +51,6 @@ namespace Anthem.Items.MNPC
             }
         }
 
-        bool NextDay;
         public override void SetupShop(Chest shop, ref int nextSlot)
         {
             
