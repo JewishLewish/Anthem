@@ -46,22 +46,4 @@ namespace Anthem.Items.Accessory
                 .Register();
         }
     }
-
-    public class YourModPlayer : ModPlayer
-    {
-        public bool reflectDamage;
-
-        public override void ResetEffects()
-        {
-            reflectDamage = false;
-        }
-
-        public override void OnHitByNPC(NPC npc, int damage, bool crit)
-        {
-            if (reflectDamage)
-            {
-                npc.StrikeNPC(damage / 10, 0f, 0, false, false, false);
-            }
-        }
-    }
 }
