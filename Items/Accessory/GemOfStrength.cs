@@ -42,7 +42,7 @@ namespace Anthem.Items.Accessory
                 .AddIngredient(ItemID.ThornsPotion, 5)
                 .AddIngredient(ItemID.WrathPotion, 5)
                 .AddIngredient(ItemID.SummoningPotion, 5)
-                .AddTile(TileID.TinkerersWorkbench)
+                .AddTile(TileID.Bottles)
                 .Register();
         }
     }

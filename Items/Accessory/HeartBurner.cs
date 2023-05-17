@@ -31,8 +31,10 @@ namespace Anthem.Items.Accessory
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(ItemID.Gel, 1) // AddIngredient takes ItemID, then Quantity
-				.AddTile(TileID.WorkBenches) // AddTile takes the TileID
+				.AddIngredient(ItemID.IronskinPotion, 5) // AddIngredient takes ItemID, then Quantity
+                .AddIngredient(ItemID.Shackle, 1)
+                .AddIngredient(ItemID.EndurancePotion, 5)
+				.AddTile(TileID.Cactus) // AddTile takes the TileID
 				.Register(); // Register registers the item
 		}
     }
