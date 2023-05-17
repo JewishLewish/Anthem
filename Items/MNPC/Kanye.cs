@@ -62,13 +62,11 @@ namespace Anthem.Items.MNPC
             }
 
             //KANYE'S GIFT: RANDOM ITEM
-            if (NextDay == true)
-            {
+
             shop.item[nextSlot].SetDefaults(randitem , false);
             shop.item[nextSlot].value = 1;
             nextSlot++;
-            NextDay = false;
-            }
+
             
 
             shop.item[nextSlot].SetDefaults(ItemID.TinBow, false);
