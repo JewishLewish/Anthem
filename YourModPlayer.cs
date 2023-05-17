@@ -71,9 +71,10 @@ namespace Anthem
                         Main.npc[i].AddBuff(BuffID.OnFire, 180); // Apply 'On Fire!' debuff for 3 seconds (60 frames per second)
                         Main.npc[i].AddBuff(BuffID.Venom, 180); // Apply 'On Fire!' debuff for 3 seconds (60 frames per second)
                         Main.npc[i].AddBuff(BuffID.Ichor, 180); // Apply 'On Fire!' debuff for 3 seconds (60 frames per second)
-                        Main.npc[i].AddBuff(BuffID.BetsysCurse, 180); // Apply 'On Fire!' debuff for 3 seconds (60 frames per second)
+                        Main.npc[i].AddBuff(BuffID.CursedInferno, 180); // Apply 'On Fire!' debuff for 3 seconds (60 frames per second)
                         Main.npc[i].AddBuff(BuffID.Frostburn, 180); // Apply 'On Fire!' debuff for 3 seconds (60 frames per second)
-                        
+                        Main.npc[i].AddBuff(BuffID.Stinky, 60); // Apply 'On Fire!' debuff for 3 seconds (60 frames per second)
+                        Main.npc[i].AddBuff(BuffID.Oiled, 60); // Apply 'On Fire!' debuff for 3 seconds (60 frames per second)
                     }
                 }
             }

@@ -40,9 +40,10 @@ namespace Anthem.Items.Accessory
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(ItemID.Gel, 16) // 16 Gel
-                .AddIngredient(ItemID.IronBar, 4) //4 Iron Bar
-				.AddTile(TileID.WorkBenches) // AddTile takes the TileID
+				.AddIngredient(ItemID.BandofRegeneration, 1) // Band of regeneration
+                .AddIngredient(ItemID.NaturesGift, 1) // NaturesGift
+                .AddIngredient(ItemID.IronBar, 2) // 2 Iron Bars
+				.AddTile(TileID.Chairs) // AddTile takes the TileID
 				.Register(); // Register registers the item
 		}
     }

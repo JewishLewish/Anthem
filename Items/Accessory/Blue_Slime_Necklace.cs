@@ -33,7 +33,7 @@ namespace Anthem.Items.Accessory
 		{
 			CreateRecipe()
 				.AddIngredient(ItemID.Gel, 16) // 16 Gel
-                .AddIngredient(ItemID.IronBar, 4) //4 Iron Bar
+                .AddIngredient(ItemID.Wood, 4) //4 Wood
 				.AddTile(TileID.WorkBenches) // AddTile takes the TileID
 				.Register(); // Register registers the item
 		}
