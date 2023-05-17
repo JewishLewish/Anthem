@@ -8,7 +8,7 @@ namespace Anthem.Items.MNPC
     public class Kanye : ModNPC
     {
         
-        public int randitem;
+        public int randitem = Main.rand.Next(0, ItemLoader.ItemCount);
         public override void SetStaticDefaults()
         {
             
