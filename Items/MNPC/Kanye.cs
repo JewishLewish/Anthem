@@ -8,6 +8,7 @@ namespace Anthem.Items.MNPC
     public class Kanye : ModNPC
     {
         
+        public int randitem;
         public override void SetStaticDefaults()
         {
             
@@ -55,15 +56,15 @@ namespace Anthem.Items.MNPC
         {
             
 
-            if (Main.dayTime == true)
+            if (Main.dayTime && Main.time == 0)
             {
-                bool NextDay = true;
+                randitem = Main.rand.Next(0, ItemLoader.ItemCount);
             }
 
             //KANYE'S GIFT: RANDOM ITEM
             if (NextDay == true)
             {
-            shop.item[nextSlot].SetDefaults(Main.rand.Next(0, ItemLoader.ItemCount) , false);
+            shop.item[nextSlot].SetDefaults(randitem , false);
             shop.item[nextSlot].value = 1;
             nextSlot++;
             NextDay = false;
