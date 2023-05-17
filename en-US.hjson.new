@@ -1,0 +1,20 @@
+
+Mods: {
+	Anthem: {
+		Items: {
+			Blue_Slime_Necklace: {
+				DisplayName: Blue Slime Necklace
+				Tooltip: 20% Jump Boost
+			}
+
+			FirstSword: {
+				DisplayName: Yeezus
+				Tooltip:
+					'''
+					150% Faster Movespeed
+					500% Damage Increase
+					'''
+			}
+		}
+	}
+}
