@@ -11,6 +11,11 @@ namespace Anthem.Items.MNPC
         public int randitem = Main.rand.Next(0, ItemLoader.ItemCount);
         public override void SetStaticDefaults()
         {
+
+            if (Main.dayTime && Main.time == 0)
+            {
+                randitem = Main.rand.Next(0, ItemLoader.ItemCount);
+            }
             
             DisplayName.SetDefault("Kanye");
             Main.npcFrameCount[NPC.type] = 26;
@@ -53,12 +58,6 @@ namespace Anthem.Items.MNPC
 
         public override void SetupShop(Chest shop, ref int nextSlot)
         {
-            
-
-            if (Main.dayTime && Main.time == 0)
-            {
-                randitem = Main.rand.Next(0, ItemLoader.ItemCount);
-            }
 
             //KANYE'S GIFT: RANDOM ITEM
 
