@@ -10,8 +10,8 @@ namespace Anthem.Items.Accessory
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Gem of Hellbent");
-            Tooltip.SetDefault("POWER OF GRASS HAS BEEN TOUCHED!\n" +
-            "Gives all Environmental Buffs Including:\n-> Campfire\n-> Dryad's Blessing\n-> Happy!\n-> Heart Latern\n-> Honey\n-> Star in a Bottle\n-> The Bast Defense");
+            Tooltip.SetDefault("Any attack inflicts Ichor, Venom, On Fire!, Betsy's Curse and Frostburn\n"+
+            "On death, all enemies are inflicted with debuffs");
         }
 
         public override void SetDefaults()
@@ -28,18 +28,14 @@ namespace Anthem.Items.Accessory
             player.GetModPlayer<YourModPlayer>().flamingAmulet = true;
         }
 
-        public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit) {
-
-        }
-
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.Campfire, 1)
-                .AddIngredient(ItemID.CatBast, 1)
-                .AddIngredient(ItemID.StarinaBottle, 1)
-                .AddIngredient(ItemID.BottledHoney, 8)
-                .AddIngredient(ItemID.Sunflower, 16)
+                .AddIngredient(ItemID.InfernoPotion, 1)
+                .AddIngredient(ItemID.RagePotion, 5)
+                .AddIngredient(ItemID.HunterPotion, 5)
+                .AddIngredient(ItemID.TitanPotion, 5)
+                .AddIngredient(ItemID.BattlePotion, 5)
                 .AddTile(TileID.TinkerersWorkbench)
                 .Register();
         }
