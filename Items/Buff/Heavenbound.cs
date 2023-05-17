@@ -9,7 +9,7 @@ namespace Anthem.Items.Buff
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Heavenbound");
-            Description.SetDefault("Jesse blesses you. 20% more movement speed, melee and defense");
+            Description.SetDefault("Jessie blesses you. 20% more movement speed, melee and defense");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false; //Add this so the nurse doesn't remove the buff when healing
         }
