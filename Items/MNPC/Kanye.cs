@@ -1,13 +1,16 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System;
 
 namespace Anthem.Items.MNPC
 {
     public class Kanye : ModNPC
     {
+        
         public override void SetStaticDefaults()
         {
+            
             DisplayName.SetDefault("Kanye");
             Main.npcFrameCount[NPC.type] = 26;
             NPCID.Sets.AttackFrameCount[NPC.type] = 5;
@@ -47,15 +50,25 @@ namespace Anthem.Items.MNPC
             }
         }
 
+        bool NextDay;
         public override void SetupShop(Chest shop, ref int nextSlot)
         {
-            //Wooden Arrow
-            shop.item[nextSlot].SetDefaults(ItemID.WoodenArrow, false);
+            
+
+            if (Main.dayTime == true)
+            {
+                bool NextDay = true;
+            }
+
+            //KANYE'S GIFT: RANDOM ITEM
+            if (NextDay == true)
+            {
+            shop.item[nextSlot].SetDefaults(Main.rand.Next(0, ItemLoader.ItemCount) , false);
             shop.item[nextSlot].value = 1;
             nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.WoodenBow, false);
-            nextSlot++;
+            NextDay = false;
+            }
+            
 
             shop.item[nextSlot].SetDefaults(ItemID.TinBow, false);
             shop.item[nextSlot].value = 500;          
@@ -69,7 +82,7 @@ namespace Anthem.Items.MNPC
 
             if (NPC.downedPlantBoss)
             {
-                shop.item[nextSlot].SetDefaults(ItemID.ChlorophyteBullet, false);
+                shop.item[nextSlot].SetDefaults(ItemID.ChlorophyteBullet, false); // chlorophyte bullets after plantera :)))
                 shop.item[nextSlot].value = 5000;
                 nextSlot++;
             }
