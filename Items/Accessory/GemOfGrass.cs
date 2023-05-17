@@ -48,6 +48,7 @@ namespace Anthem.Items.Accessory
                 .AddIngredient(ItemID.StarinaBottle, 1)
                 .AddIngredient(ItemID.BottledHoney, 8)
                 .AddIngredient(ItemID.Sunflower, 16)
+                .AddIngredient(ItemID.HeartLantern,1)
                 .AddTile(TileID.TinkerersWorkbench)
                 .Register();
         }
