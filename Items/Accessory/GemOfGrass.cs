@@ -38,6 +38,8 @@ namespace Anthem.Items.Accessory
             player.AddBuff(BuffID.CatBast, 0);
 
             player.AddBuff(BuffID.Sunflower, 0);
+
+            player.AddBuff(BuffID.WellFed, 0);
         }
 
         public override void AddRecipes()

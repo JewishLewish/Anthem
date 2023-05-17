@@ -55,6 +55,7 @@ namespace Anthem.Items.Accessory
             player.AddBuff(BuffID.StarInBottle, 0);
             player.AddBuff(BuffID.CatBast, 0);
             player.AddBuff(BuffID.Sunflower, 0);
+            player.AddBuff(BuffID.WellFed3, 0);
             
             //Gauntlet
             player.AddBuff(BuffID.Lifeforce , 0);
