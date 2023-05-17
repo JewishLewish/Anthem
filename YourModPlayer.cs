@@ -53,7 +53,7 @@ namespace Anthem
                 Player playe = Main.player[i];
                 if (playe.active && !playe.dead)
                 {
-                    playe.AddBuff(ModContent.BuffType<Items.Buff.Heavenbound>(), 2);
+                    playe.AddBuff(ModContent.BuffType<Items.Buff.Heavenbound>(), 180);
                 }
             }
             }
