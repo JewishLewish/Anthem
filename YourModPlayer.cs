@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System.Threading;
 
 namespace Anthem
 {
@@ -56,6 +57,8 @@ namespace Anthem
                     playe.AddBuff(ModContent.BuffType<Items.Buff.Heavenbound>(), 1800);
                 }
             }
+            Thread.Sleep(1000);
+            player.AddBuff(ModContent.BuffType<Items.Buff.Heavenbound>(), 1800);
             }
         }
 
