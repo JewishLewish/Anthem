@@ -38,7 +38,7 @@ namespace Anthem
 
             if (HeavenGem) {
                 Player player = Main.player[proj.owner];
-                int healAmount = damage / 10; // 1/10th of damage dealt as healing
+                int healAmount = damage / 20; // 1/20th of damage dealt as healing
                 player.statLife += healAmount;
                 player.HealEffect(healAmount);
             }

@@ -10,7 +10,7 @@ namespace Anthem.Items.Accessory
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Gem of HeavenBound");
-            Tooltip.SetDefault("1/10th of Damage Dealt will heal you\n"+
+            Tooltip.SetDefault("1/20th of Damage Dealt will heal you\n"+
             "On revive, players gain Heavenbound effect\n"+
             "Permanent Greater Luck Buff Effect and Spelunker\n"+
             "x1.2 boost on Mana Regeneration\n");
