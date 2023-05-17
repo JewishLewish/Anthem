@@ -8,14 +8,14 @@ namespace Anthem
     public class YourModPlayer : ModPlayer
     {
         public bool reflectDamage;
-        public bool flamingAmulet;
+        public bool Hellbent;
 
         public bool HeavenGem;
 
         public override void ResetEffects()
         {
             reflectDamage = false;
-            flamingAmulet = false;
+            Hellbent = false;
         }
 
         public override void OnHitByNPC(NPC npc, int damage, bool crit)
@@ -27,7 +27,7 @@ namespace Anthem
         }
 
 		public override void OnHitNPCWithProj(Projectile proj, NPC target, int damage, float knockback, bool crit)	 {
-            if (flamingAmulet)
+            if (Hellbent)
             {
                 target.AddBuff(BuffID.OnFire, 180);
                 target.AddBuff(BuffID.Venom, 180);
@@ -60,7 +60,7 @@ namespace Anthem
         }
 
         public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource) {
-            if (flamingAmulet) {
+            if (Hellbent) {
                 for (int i = 0; i < Main.maxNPCs; i++)
                 {
                     if (Main.npc[i].active && !Main.npc[i].townNPC && !Main.npc[i].friendly)

@@ -25,7 +25,7 @@ namespace Anthem.Items.Accessory
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<YourModPlayer>().flamingAmulet = true;
+            player.GetModPlayer<YourModPlayer>().Hellbent = true;
         }
 
         public override void AddRecipes()
