@@ -19,7 +19,7 @@ namespace Anthem.Items.Accessory
         {
             Item.width = 20;
             Item.height = 20;
-            Item.accessory = true;
+            Item.accessory = true; // SO TRUE!!!
             Item.defense = 2;
         }
 
