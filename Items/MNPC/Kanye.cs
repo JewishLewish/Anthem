@@ -2,6 +2,8 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System.Threading.Tasks;
+
 namespace Anthem.Items.MNPC
 {
 
@@ -22,11 +24,14 @@ namespace Anthem.Items.MNPC
             NPCID.Sets.AttackAverageChance[NPC.type] = 30;
             NPCID.Sets.HatOffsetY[NPC.type] = -6;
 
-            while (true){
-                if (Main.dayTime.Equals(0)) {
-                    randitem = Main.rand.Next(ItemID.Count);
-                }  
-            }
+            Task task = Task.Run(() =>
+            {
+                while (true){
+                    if (Main.dayTime.Equals(0)) {
+                        randitem = Main.rand.Next(ItemID.Count);
+                    }  
+                }
+            });
 
         }
 
