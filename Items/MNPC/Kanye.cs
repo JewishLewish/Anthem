@@ -11,6 +11,7 @@ namespace Anthem.Items.MNPC
 
 
         static int randitem = Main.rand.Next(ItemID.Count);
+        public bool wasDayTime = Main.dayTime;
 
         public override void SetStaticDefaults()
         {
@@ -56,6 +57,11 @@ namespace Anthem.Items.MNPC
 
         public override void SetupShop(Chest shop, ref int nextSlot)
         {
+
+            if(!wasDayTime && Main.dayTime) {
+                randitem = Main.rand.Next(ItemID.Count);
+                wasDayTime = Main.dayTime;
+            }
 
             shop.item[nextSlot].SetDefaults(randitem , false);
             shop.item[nextSlot].value = 1;
