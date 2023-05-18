@@ -23,16 +23,6 @@ namespace Anthem.Items.MNPC
             NPCID.Sets.AttackTime[NPC.type] = 45;
             NPCID.Sets.AttackAverageChance[NPC.type] = 30;
             NPCID.Sets.HatOffsetY[NPC.type] = -6;
-
-            Task task = Task.Run(() =>
-            {
-                while (true){
-                    if (Main.dayTime.Equals(0)) {
-                        randitem = Main.rand.Next(ItemID.Count);
-                    }  
-                }
-            });
-
         }
 
         public override void SetDefaults()
