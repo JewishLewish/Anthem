@@ -40,6 +40,7 @@ namespace Anthem.Items.MNPC
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0.5f;
             AnimationType = NPCID.Steampunker;
+
         }
 
         public override void SetChatButtons(ref string button, ref string button2)
