@@ -10,8 +10,8 @@ namespace Anthem.Items.MNPC
     {
 
 
-        static int randitem = Main.rand.Next(ItemID.Count);
-        public bool wasDayTime = Main.dayTime;
+        public int randitem = Main.rand.Next(ItemID.Count);
+        public bool wasDayTime = false;
 
         public override void SetStaticDefaults()
         {
@@ -60,8 +60,8 @@ namespace Anthem.Items.MNPC
 
             if(!wasDayTime && Main.dayTime) {
                 randitem = Main.rand.Next(ItemID.Count);
-                wasDayTime = Main.dayTime;
             }
+            wasDayTime = Main.dayTime;
 
             shop.item[nextSlot].SetDefaults(randitem , false);
             shop.item[nextSlot].value = 1;
