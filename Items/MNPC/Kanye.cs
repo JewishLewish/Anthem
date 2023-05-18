@@ -95,7 +95,7 @@ namespace Anthem.Items.MNPC
 
          public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return (float)100.0;
+            return (float)1.0;
         }
 
         public override string GetChat()
