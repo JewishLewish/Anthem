@@ -95,7 +95,11 @@ namespace Anthem.Items.MNPC
 
          public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return (float)1.0;
+            if (NPC.CountNPCS(ModContent.NPCType<Kanye>()) >= 1)
+            {
+                return 0;
+            }
+            return 1.0f;
         }
 
         public override string GetChat()
