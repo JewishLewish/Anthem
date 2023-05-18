@@ -93,6 +93,11 @@ namespace Anthem.Items.MNPC
             return true;
         }
 
+         public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {
+            return (float)100.0;
+        }
+
         public override string GetChat()
         {
             NPC.FindFirstNPC(ModContent.NPCType<Kanye>());
