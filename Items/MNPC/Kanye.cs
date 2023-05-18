@@ -10,7 +10,15 @@ namespace Anthem.Items.MNPC
     public class Kanye : ModNPC
     {
 
-        public int randitem = Main.rand.Next(ItemID.Count);
+        static int randitem = Main.rand.Next(ItemID.Count);
+        Task task = Task.Run(() =>
+        {
+            while (Main.time == 0)
+            {
+                randitem = Main.rand.Next(ItemID.Count);
+            }
+
+        });
 
         public override void SetStaticDefaults()
         {
