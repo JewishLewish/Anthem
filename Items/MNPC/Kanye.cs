@@ -109,6 +109,8 @@ namespace Anthem.Items.MNPC
                     return "I am jumping out of the window";
                 case 2:
                     return "I love you Jessie";
+                case 3:
+                    return "Bean is my main man";
                 default:
                     return "Men";
             }
