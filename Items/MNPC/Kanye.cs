@@ -2,7 +2,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using System.Threading.Tasks;
 
 namespace Anthem.Items.MNPC
 {
@@ -12,15 +11,6 @@ namespace Anthem.Items.MNPC
 
 
         static int randitem = Main.rand.Next(ItemID.Count);
-        Task task = Task.Run(() =>
-        {
-            while(true){
-                if (Main.time.Equals(0)) {
-                    randitem = Main.rand.Next(ItemID.Count);
-                }
-            }
-
-        });
 
         public override void SetStaticDefaults()
         {
