@@ -1,21 +1,17 @@
-﻿using Terraria;
+﻿using System.Threading;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using System;
-
 namespace Anthem.Items.MNPC
 {
+
     public class Kanye : ModNPC
     {
-        
-        public int randitem = Main.rand.Next(0, ItemLoader.ItemCount);
+
+        public int randitem = Main.rand.Next(ItemID.Count);
+
         public override void SetStaticDefaults()
         {
-
-            if (Main.dayTime && Main.time == 0)
-            {
-                randitem = Main.rand.Next(0, ItemLoader.ItemCount);
-            }
             
             DisplayName.SetDefault("Kanye");
             Main.npcFrameCount[NPC.type] = 26;
@@ -25,6 +21,13 @@ namespace Anthem.Items.MNPC
             NPCID.Sets.AttackTime[NPC.type] = 45;
             NPCID.Sets.AttackAverageChance[NPC.type] = 30;
             NPCID.Sets.HatOffsetY[NPC.type] = -6;
+
+            while (true){
+                if (Main.dayTime.Equals(0)) {
+                    randitem = Main.rand.Next(ItemID.Count);
+                }  
+            }
+
         }
 
         public override void SetDefaults()
@@ -58,8 +61,6 @@ namespace Anthem.Items.MNPC
 
         public override void SetupShop(Chest shop, ref int nextSlot)
         {
-
-            //KANYE'S GIFT: RANDOM ITEM
 
             shop.item[nextSlot].SetDefaults(randitem , false);
             shop.item[nextSlot].value = 1;
@@ -105,8 +106,5 @@ namespace Anthem.Items.MNPC
                     return "Men";
             }
         }
-
-        
-
     }
 }
