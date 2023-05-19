@@ -1,4 +1,6 @@
-﻿using System.Threading;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -24,6 +26,14 @@ namespace Anthem.Items.MNPC
             NPCID.Sets.AttackTime[NPC.type] = 45;
             NPCID.Sets.AttackAverageChance[NPC.type] = 30;
             NPCID.Sets.HatOffsetY[NPC.type] = -6;
+        }
+
+        public override List<string> SetNPCNameList()
+        {
+            return new List<string>()
+            {
+                "Kanye"
+            };
         }
 
         public override void SetDefaults()
