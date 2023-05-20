@@ -77,15 +77,22 @@ namespace Anthem.Items.MNPC
             shop.item[nextSlot].value = 1;
             nextSlot++;
 
-            
-
-            shop.item[nextSlot].SetDefaults(ItemID.TinBow, false);
-            shop.item[nextSlot].value = 500;          
-            nextSlot++;
-
             if (NPC.downedBoss1)
             {
-                shop.item[nextSlot].SetDefaults(ItemID.PlatinumBow, false);
+                shop.item[nextSlot].SetDefaults(ItemID.DemoniteOre, false);
+                nextSlot++;
+            }
+
+            if (NPC.downedBoss2) {
+                shop.item[nextSlot].SetDefaults(ItemID.ShadowScale, false);
+                nextSlot++;
+
+                shop.item[nextSlot].SetDefaults(ItemID.TissueSample, false);
+                nextSlot++;
+            }
+
+            if (NPC.downedBoss3) {
+                shop.item[nextSlot].SetDefaults(ItemID.Obsidian, false);
                 nextSlot++;
             }
 
