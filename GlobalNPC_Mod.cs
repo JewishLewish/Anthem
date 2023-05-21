@@ -1,10 +1,11 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.GameContent.ItemDropRules;
 
 namespace Anthem
 {
-	public class MerchantRework : GlobalNPC
+	public class GlobalNPC_Mod : GlobalNPC
 	{
 		//If the merchant has been hit by a player, they will double their sell price
 		public override void SetupShop(int type, Chest shop, ref int nextSlot) {
@@ -61,6 +62,15 @@ namespace Anthem
                 }
             }
             return false;
+        }
+
+        public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot) {
+            // First, we need to check the npc.type to see if the code is running for the vanilla NPC we want to change
+            if (npc.type == NPCID.Harpy) {
+                // This is where we add item drop rules for VampireBat, here is a simple example:
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Items.Consumable.GoldenFeather>(), 1));
+            }
+            // We can use other if statements here to adjust the drop rules of other vanilla NPC
         }
 	}
 }

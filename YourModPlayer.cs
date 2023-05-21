@@ -11,6 +11,8 @@ namespace Anthem
         public bool reflectDamage;
         public bool Hellbent;
 
+        public bool GoldenFeatherUsed = false;
+
         public bool HeavenGem;
 
         public override void ResetEffects()
