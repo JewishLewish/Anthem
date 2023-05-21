@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.ItemDropRules;
+using System;
 
 namespace Anthem
 {
@@ -63,12 +64,16 @@ namespace Anthem
             }
             return false;
         }
-
+        Random random = new Random();
         public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot) {
             // First, we need to check the npc.type to see if the code is running for the vanilla NPC we want to change
+            
             if (npc.type == NPCID.Harpy) {
                 // This is where we add item drop rules for VampireBat, here is a simple example:
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Items.Consumable.GoldenFeather>(), 1));
+                if (random.Next(1, 101) == 1) {
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Items.Consumable.GoldenFeather>(), 1));
+                }
+
             }
             // We can use other if statements here to adjust the drop rules of other vanilla NPC
         }
