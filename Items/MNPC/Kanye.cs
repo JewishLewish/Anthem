@@ -102,6 +102,25 @@ namespace Anthem.Items.MNPC
                 shop.item[nextSlot].value = 5000;
                 nextSlot++;
             }
+
+            if (NPC.downedDeerclops) {
+                shop.item[nextSlot].SetDefaults(ItemID.PewMaticHorn, false); // chlorophyte bullets after plantera :)))
+                shop.item[nextSlot].value = 10000;
+                nextSlot++;
+
+                shop.item[nextSlot].SetDefaults(ItemID.WeatherPain, false); // chlorophyte bullets after plantera :)))
+                shop.item[nextSlot].value = 10000;
+                nextSlot++;
+
+                shop.item[nextSlot].SetDefaults(ItemID.HoundiusShootius, false); // chlorophyte bullets after plantera :)))
+                shop.item[nextSlot].value = 10000;
+                nextSlot++;
+
+                shop.item[nextSlot].SetDefaults(ItemID.LucyTheAxe, false); // chlorophyte bullets after plantera :)))
+                shop.item[nextSlot].value = 10000;
+                nextSlot++;
+
+            }
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs, int money)
