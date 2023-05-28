@@ -93,6 +93,7 @@ namespace Anthem.Items.MNPC
 
             if (NPC.downedBoss3) {
                 shop.item[nextSlot].SetDefaults(ItemID.Obsidian, false);
+                shop.item[nextSlot].value = 5000;
                 nextSlot++;
             }
 
