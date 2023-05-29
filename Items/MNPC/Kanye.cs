@@ -73,6 +73,8 @@ namespace Anthem.Items.MNPC
             }
             wasDayTime = Main.dayTime;
 
+
+
             shop.item[nextSlot].SetDefaults(randitem , false);
             shop.item[nextSlot].value = 1;
             nextSlot++;

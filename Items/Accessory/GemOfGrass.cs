@@ -26,10 +26,10 @@ namespace Anthem.Items.Accessory
                 public override void UpdateAccessory(Player player, bool hideVisual)
         {
             // Apply Shining Potion buff
-            player.AddBuff(BuffID.Campfire, 0); // 2 hours
+            player.AddBuff(BuffID.Campfire, 0);
 
             // Apply Heartreach Potion buff
-            player.AddBuff(BuffID.DryadsWard, 0); // 2 hours
+            player.AddBuff(BuffID.DryadsWard, 0);
 
             player.AddBuff(BuffID.Honey, 0);
 
